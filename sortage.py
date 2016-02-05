@@ -28,14 +28,13 @@ def sort_method_2(filename):
 	rawfile = open(filename+".txt" , 'r')
 	for item in rawfile:
 		dict[item.rstrip()] += 1
-		# try:
-		# 	dict[item.rstrip()] += 1
-		# except:
-		# 	dict[item.rstrip()] = 1
 
 	index = 0
 	for item in sorted(dict.keys()):
 		b = dict[item]
+		#xrange() on the other hand generate only a particular 
+		#value at a time and can only be used with the for 
+		#loop to print all the values required.
 		result[index:index+b] = [item for i in xrange(b)]
 		index += b
 	return result
