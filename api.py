@@ -2,30 +2,32 @@
 
 import time
 
+
 def initialize(filename):
-	output = {}
+	items = set()
 	rawfile = open(filename + ".txt" , 'r')
 	for line in rawfile:
-		data = line.rstrip().split(" ")
-		key= data[0] + "-"+data[1]
-		output[key] = [data[0], data[1]]		
-	return output	
+		items.add(line)
+	return items
 
 
 def check_blacklist(name, phone_number):
-	key = name+"-"+str(phone_number)
-	return True if key in blacklist.keys() else False
-
+	find = name+" "+str(phone_number)
+	return True if find in blacklist else False
 
 def main():
-	start = time.time()
 	global blacklist
+
+	print "-----------------------------------"
+	start = time.time()
 	blacklist = initialize("blacklist")
 	print check_blacklist('oeaqnll',51963794481)
 	end = time.time()
 
 	time1 = (end-start)
 	print 'Time to sort method 1 = ', time1, 's'
+	print "-----------------------------------"
+
 
 
 if __name__ == '__main__':
