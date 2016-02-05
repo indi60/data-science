@@ -20,14 +20,18 @@ def sort_method_1(rawdata):
 	return rawdata
 
 """second method to sort the data"""
-def sort_method_2(rawdata):
+def sort_method_2(filename):
 	result = []
 	dict = {}
-	for item in rawdata:
-		try:
-			dict[item] += 1
-		except:
-			dict[item] = 1
+	for i in range(10,100):
+		dict[str(i)] = 0
+	rawfile = open(filename+".txt" , 'r')
+	for item in rawfile:
+		dict[item.rstrip()] += 1
+		# try:
+		# 	dict[item.rstrip()] += 1
+		# except:
+		# 	dict[item.rstrip()] = 1
 
 	index = 0
 	for item in sorted(dict.keys()):
@@ -44,7 +48,7 @@ def outputFile(filename,input):
 	out = open("sorted_"+filename+".txt" , 'w')
 	for i in input:
 		out.write(i + "\n")
-	print "Parsing "+sys.argv[1]+".txt is finish"
+	# print "Parsing "+sys.argv[1]+".txt is finish"
 	print "Output: sorted_"+filename+".txt"
 
 """======================================================================="""
@@ -68,8 +72,8 @@ def main():
 			print "--------------------------------"
 			print "Method 2 is starting now....."
 			start = time.time()
-			raw = readfile(filename)
-			outputFile(filename, sort_method_2(raw))
+			# raw = readfile(filename)
+			outputFile(filename, sort_method_2(filename))
 			end = time.time()
 			time2 = (end-start)
 			print 'Time to sort method 2 = ', time2, 's'
