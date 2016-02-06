@@ -12,8 +12,8 @@ def initialize(filename):
 
 
 def check_blacklist(name, phone_number):
-	find = name+" "+str(phone_number)
-	return True if find in blacklist else False
+	keyword = name+" "+str(phone_number)
+	return True if keyword in blacklist else False
 
 def main():
 	global blacklist

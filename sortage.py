@@ -23,7 +23,7 @@ def sort_method_1(rawdata):
 def sort_method_2(filename):
 	result = []
 	dict = {}
-	for i in range(10,100):
+	for i in range(0,100):
 		dict[str(i)] = 0
 	rawfile = open(filename+".txt" , 'r')
 	for item in rawfile:
@@ -59,13 +59,13 @@ def main():
 			filename = sys.argv[1]
 			print "Parsing "+filename+".txt now....."
 
-			start = time.time()
-			print "Method 1 is starting now....."
-			raw= readfile(filename)
-			outputFile(filename,sort_method_1(raw))
-			end = time.time()
-			time1 = (end-start)
-			print 'Time to sort method 1 = ', time1, 's'
+			# start = time.time()
+			# print "Method 1 is starting now....."
+			# raw= readfile(filename)
+			# outputFile(filename,sort_method_1(raw))
+			# end = time.time()
+			# time1 = (end-start)
+			# print 'Time to sort method 1 = ', time1, 's'
 
 
 			print "--------------------------------"
