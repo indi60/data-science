@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-
 import sys, os.path, time
-from quicksort import *
+
 
 """======================== Question number 1 ============================"""
 """read a data file"""
@@ -20,6 +19,7 @@ def sort_method_1(rawdata):
 	return rawdata
 
 """second method to sort the data"""
+#eliminate bucket data
 def sort_method_2(filename):
 	result = []
 	dict = {}
@@ -32,7 +32,7 @@ def sort_method_2(filename):
 	index = 0
 	for item in sorted(dict.keys()):
 		b = dict[item]
-		#xrange() on the other hand generate only a particular 
+		#xrange() only generate a particular 
 		#value at a time and can only be used with the for 
 		#loop to print all the values required.
 		result[index:index+b] = [item for i in xrange(b)]
