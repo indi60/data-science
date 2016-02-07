@@ -15,12 +15,12 @@ def datafile_generator(total_data):
 	for i in datarange:
 		file.write(str(randint(12,80)) + "\n")
 
-	file = open("blacklist.txt" , 'w')
-	for i in datarange:
-		lenghtname = randint(3,9)
-		name = randomword(lenghtname)
-		phone_number = phone_number_generator(randint(10,12))
-		file.write(name + " " +str(phone_number)+ "\n")
+	# file = open("blacklist.txt" , 'w')
+	# for i in datarange:
+	# 	lenghtname = randint(3,9)
+	# 	name = randomword(lenghtname)
+	# 	phone_number = phone_number_generator(randint(10,12))
+	# 	file.write(name + " " +str(phone_number)+ "\n")
 
 def randomword(length):
    return ''.join(random.choice(string.lowercase) for i in range(length))
