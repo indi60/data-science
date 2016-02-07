@@ -18,15 +18,12 @@ def check_blacklist(name, phone_number):
 def main():
 	global blacklist
 
-	print "-----------------------------------"
-	start = time.time()
+	# start = time.time()
 	blacklist = initialize("blacklist")
-	print check_blacklist('oeaqnll',51963794481)
-	end = time.time()
-
-	time1 = (end-start)
-	print 'Time to sort method 1 = ', time1, 's'
-	print "-----------------------------------"
+	print check_blacklist('agung',6285648077379)
+	# end = time.time()
+	# time1 = (end-start)
+	# print 'Total time search a person and contact: ', time1, 's'
 
 
 if __name__ == '__main__':

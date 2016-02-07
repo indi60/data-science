@@ -35,10 +35,11 @@ def main():
 		try:
 			filename = sys.argv[1]
 			print "Parsing "+filename+".txt now....."
-			start = time.time()
-			outputFile(filename, sort_method_2(filename))
-			end = time.time()
-			time2 = (end-start)
+			# start = time.time()
+			outputFile(filename, readAndSort(filename))
+			# end = time.time()
+			# time2 = (end-start)
+			# print 'Time to sort method 1 = ', time1, 's'
 			print "Finish..."
 		except KeyError:
 			print "Cannot find file "+sys.argv[1]+".txt"
