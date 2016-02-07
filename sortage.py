@@ -5,7 +5,6 @@ import sys, os.path, time
 
 """This is the main parse, this method will read
 the inputfile and classify the number inside dictionary"""
-#bucket bucket sort
 def readAndSort(filename):
 	result = []
 	dict = {}
